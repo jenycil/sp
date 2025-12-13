@@ -25,56 +25,13 @@ header nav a { padding: 5px 10px; transition: 0.3s; }
 header nav a:hover, header nav a.active { color: #ff4c60; border-bottom: 2px solid #ff4c60; }
 .header-icons { display: flex; gap: 15px; cursor: pointer; }
 
-/* Burger Menu Icon (for mobile) */
-#menu-icon { 
-  display: none; 
-  font-size: 1.8rem; 
-  background: none; 
-  border: none; 
-  color: #ff4c60; 
-  cursor: pointer; 
-}
+#menu-icon { display: none; font-size: 1.8rem; background: none; border: none; color: #ff4c60; cursor: pointer; }
 
-/* --- HOME --- */
-.home { 
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
-  padding-top: 100px; 
-  background: linear-gradient(135deg, #ff4c60, #6a11cb); 
-  color: #fff; 
-  text-align: center;
-}
-.home-content { max-width: 600px; animation: fadeIn 1s ease forwards;}
-.home-content h2 { font-size: 2.5rem; margin-bottom: 15px; }
-.home-content span { color: #ffd700; }
-.home-content p { margin-bottom: 20px; font-size: 1.1rem; }
-.home-buttons a { 
-  display: inline-block; 
-  margin: 5px; 
-  padding: 10px 20px; 
-  background: #fff; 
-  color: #ff4c60; 
-  border-radius: 25px; 
-  font-weight: bold; 
-  transition: 0.3s; 
-}
-.home-buttons a:hover { background: #ff4c60; color: #fff; }
-.home-img { 
-  max-width: 300px; 
-  border-radius: 50%; 
-  border: 5px solid #fff; 
-  margin: 20px auto 0; 
-  animation: slideIn 1s ease forwards; 
-}
-
-/* --- SIDEBAR (for mobile) --- */
+/* --- SIDEBAR --- */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Hidden by default */
+  left: -250px;
   width: 250px;
   height: 100%;
   background-color: #ff4c60;
@@ -82,9 +39,8 @@ header nav a:hover, header nav a.active { color: #ff4c60; border-bottom: 2px sol
   transition: 0.3s ease;
   z-index: 998;
 }
-
 .sidebar.active {
-  left: 0; /* Sidebar is shown when active */
+  left: 0;
 }
 
 .sidebar-nav a {
@@ -95,39 +51,65 @@ header nav a:hover, header nav a.active { color: #ff4c60; border-bottom: 2px sol
   font-size: 1.1rem;
   transition: 0.3s;
 }
-
 .sidebar-nav a:hover {
   background-color: #ff6b81;
 }
 
-/* --- SECTIONS --- */
-section { padding: 100px 50px; }
-section h2.heading { text-align: center; font-size: 2.2rem; margin-bottom: 50px; position: relative; }
-section h2.heading span { color: #ff4c60; }
-
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 768px) {
-  /* Hide the normal navbar and show burger icon for mobile */
-  header nav { display: none; }
-  .header-icons { display: flex; }
-  #menu-icon { display: block; }
-
-  /* Sidebar animation */
-  .sidebar { 
-    left: -250px; /* Hidden by default */
-  }
-  .sidebar.active { 
-    left: 0; /* Sidebar slides in */
-  }
-
-  /* Overlay the body content when sidebar is open */
-  body.overlay { 
-    overflow: hidden; 
-  }
+/* --- PROJECTS --- */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
-/* --- ANIMATIONS --- */
-@keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
-@keyframes slideIn { 0% { opacity: 0; transform: translateX(50px); } 100% { opacity: 1; transform: translateX(0); } }
+.project-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
 
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.view-btn {
+  padding: 10px 20px;
+  background-color: #ff4c60;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #ff6b81;
+}
+
+/* --- SCROLL TO TOP --- */
+#scrollTop { position:fixed; bottom:30px; right:30px; background:#ff4c60; color:#fff; border:none; padding:12px; border-radius:50%; cursor:pointer; display:none; font-size:1.2rem; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:0.3s; }
+#scrollTop:hover { background:#6a11cb; }
 
