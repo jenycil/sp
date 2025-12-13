@@ -41,4 +41,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // --- Smooth Scrolling for All Links ---
 document.documentElement.style.scrollBehavior = 'smooth';  // Enable smooth scrolling globally for all anchor links
-
