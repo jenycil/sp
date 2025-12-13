@@ -1,4 +1,3 @@
-// Dark mode toggle
 const darkToggle = document.getElementById("darkmode-toggle");
 const body = document.body;
 
@@ -19,4 +18,9 @@ darkToggle.addEventListener("click", () => {
     darkToggle.innerHTML = '<i class="fas fa-moon"></i>'; // switch to moon icon
     localStorage.setItem("darkmode", "disabled");
   }
+
+  // Adding transition for smooth background-color change
+  setTimeout(() => {
+    body.style.transition = 'background-color 0.3s, color 0.3s';
+  }, 10);
 });
