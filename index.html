@@ -16,7 +16,7 @@
 
   <header>
     <div class="logo">Jenycil</div>
-    <nav>
+    <nav id="navbar" class="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -27,6 +27,17 @@
       <button id="menu-icon"><i class="fa fa-bars"></i></button>
     </div>
   </header>
+
+  <!-- Sidebar (for mobile) -->
+  <div id="sidebar" class="sidebar">
+    <nav class="sidebar-nav">
+      <a href="#home" onclick="closeSidebar()">Home</a>
+      <a href="#about" onclick="closeSidebar()">About</a>
+      <a href="#services" onclick="closeSidebar()">Services</a>
+      <a href="#projects" onclick="closeSidebar()">Projects</a>
+      <a href="#contact" onclick="closeSidebar()">Contact</a>
+    </nav>
+  </div>
 
   <section id="home" class="home">
     <div class="home-content">
