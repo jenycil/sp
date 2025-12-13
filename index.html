@@ -77,6 +77,43 @@ button, .home-buttons a {
 #scrollTop:hover {
   transform: scale(1.1);
 }
+
+/* ===== EMAIL DESIGN ===== */
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  margin: 20px auto;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff4c60, #6a11cb);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  width: fit-content;
+}
+
+.contact-email i { font-size: 1.2rem; }
+.contact-email a { color: #fff; text-decoration: none; }
+.contact-email:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #6a11cb, #ff4c60);
+}
+
+/* ===== NEWSLETTER DESIGN =====
+.contact-email i {
+  font-size: 1.2rem;
+}
+
+.contact-email a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #6a11cb, #ff4c60);
+}
   </style>
 </head>
 <body>
@@ -207,7 +244,7 @@ button, .home-buttons a {
 <!-- ================= CONTACT ================= -->
 <section id="contact">
   <h2 class="heading">Contact <span>Me</span></h2>
-  <p><i class="fas fa-envelope"></i> jenycil_malintad@sjp2cd.edu.ph</p>
+  <p class="contact-email"><i class="fas fa-envelope"></i> <a href="mailto:jenycil_malintad@sjp2cd.edu.ph">jenycil_malintad@sjp2cd.edu.ph</a></p>
 
   <div class="social-icons">
     <a href="#"><i class="fab fa-github"></i></a>
