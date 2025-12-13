@@ -11,6 +11,73 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+/* ===== BUTTON DESIGNS ===== */
+button, .home-buttons a {
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Home buttons */
+.home-buttons a {
+  background: linear-gradient(135deg, #ffffff, #ffecec);
+  color: #ff4c60;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.home-buttons a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #ff4c60, #6a11cb);
+  color: #fff;
+}
+
+/* Header icon buttons */
+.header-icons button {
+  background: transparent;
+  color: #ff4c60;
+  font-size: 1.2rem;
+}
+.header-icons button:hover {
+  transform: scale(1.2);
+}
+
+/* Project filter buttons */
+.project-filters button {
+  background: linear-gradient(135deg, #6a11cb, #8e2de2);
+  color: #fff;
+  margin: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.project-filters button:hover,
+.project-filters button.active {
+  background: linear-gradient(135deg, #ff4c60, #ff6b81);
+  transform: translateY(-3px);
+}
+
+/* Form buttons */
+.contact-form button,
+.newsletter button {
+  background: linear-gradient(135deg, #ff4c60, #6a11cb);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.contact-form button:hover,
+.newsletter button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* Scroll-to-top button */
+#scrollTop {
+  background: linear-gradient(135deg, #ff4c60, #6a11cb);
+}
+#scrollTop:hover {
+  transform: scale(1.1);
+}
+  </style>
 </head>
 <body>
 
@@ -69,7 +136,7 @@
     <div class="service-card">
       <i class="fas fa-pencil-ruler service-icon"></i>
       <h3>UI/UX Design</h3>
-      <p>Modern and user-friendly interface designs.</p>
+      <p>Modern and user‑friendly interface designs.</p>
     </div>
     <div class="service-card">
       <i class="fas fa-mobile-alt service-icon"></i>
@@ -97,6 +164,15 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2 class="heading">My <span>Projects</span></h2>
+  <div class="project-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="app">App</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+  </div>
+
   <div class="project-container">
     <div class="project-card" data-category="web">
       <i class="fas fa-globe project-icon"></i>
@@ -191,4 +267,3 @@ filterBtns.forEach(btn => {
 
 </body>
 </html>
-
