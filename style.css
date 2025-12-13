@@ -1,8 +1,8 @@
 /* --- RESET & BASE --- */
-* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif;}
-body { line-height:1.6; background:#f4f4f9; color:#333; transition:0.3s; }
-a { text-decoration:none; color:inherit; }
-img { max-width:100%; display:block; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { line-height: 1.6; background: #f4f4f9; color: #333; transition: 0.3s; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
 
 /* --- HEADER --- */
 header { 
@@ -110,8 +110,8 @@ header nav a:hover, header nav a.active { color: #ff4c60; border-bottom: 2px sol
 }
 
 /* --- SCROLL TO TOP --- */
-#scrollTop { position:fixed; bottom:30px; right:30px; background:#ff4c60; color:#fff; border:none; padding:12px; border-radius:50%; cursor:pointer; display:none; font-size:1.2rem; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:0.3s; }
-#scrollTop:hover { background:#6a11cb; }
+#scrollTop { position: fixed; bottom: 30px; right: 30px; background: #ff4c60; color: #fff; border: none; padding: 12px; border-radius: 50%; cursor: pointer; display: none; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: 0.3s; }
+#scrollTop:hover { background: #6a11cb; }
 
 /* --- CONTACT SECTION --- */
 .contact {
@@ -172,4 +172,32 @@ header nav a:hover, header nav a.active { color: #ff4c60; border-bottom: 2px sol
   background-color: #6a11cb;
 }
 
+/* --- DARK MODE --- */
+body.darkmode {
+  background-color: #333;
+  color: #fff;
+}
 
+body.darkmode header {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+body.darkmode .project-card {
+  background-color: #444;
+  color: #fff;
+}
+
+body.darkmode .view-btn {
+  background-color: #ff6b81;
+}
+
+body.darkmode .contact-form input,
+body.darkmode .contact-form textarea {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #777;
+}
+
+body.darkmode .contact-form button {
+  background-color: #6a11cb;
+}
