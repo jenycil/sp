@@ -4,22 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jenycil Portfolio</title>
-  <style>
-    /* Basic styles just to visualize */
-    body { font-family: Arial, sans-serif; margin:0; }
-    header { display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#eee; }
-    nav { display:flex; gap:15px; }
-    nav a { text-decoration:none; color:#333; }
-    .burger { width:30px; height:22px; display:flex; flex-direction:column; justify-content:space-between; cursor:pointer; }
-    .burger span { display:block; height:4px; width:100%; background:#333; border-radius:2px; transition:0.3s; }
-    .burger.active span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
-    .burger.active span:nth-child(2) { opacity:0; }
-    .burger.active span:nth-child(3) { transform:rotate(-45deg) translate(6px,-6px); }
-    /* Mobile nav hidden */
-    #nav { position:fixed; top:0; right:-100%; width:200px; height:100%; background:#fff; flex-direction:column; align-items:center; justify-content:center; transition:0.3s; }
-    #nav.show { right:0; }
-    @media(min-width:769px){ #nav{position:static; flex-direction:row; height:auto; background:none; right:auto;} .burger{display:none;} }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -66,15 +51,6 @@
     <p>© 2025 Jenycil Portfolio</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    const menuIcon = document.getElementById("menu-icon");
-    const nav = document.getElementById("nav");
-
-    menuIcon.addEventListener("click", () => {
-      nav.classList.toggle("show");
-      menuIcon.classList.toggle("active");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
